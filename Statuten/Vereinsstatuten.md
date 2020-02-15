@@ -92,5 +92,6 @@ Diese Statuten wurden an der Mitgliederversammlung vom 14.02.2020 beschlossen, t
 
 Näfels, 14.02.2020
 
-Michael Zweifel	Marius Grossenbacher
-Vereinspräsident	Vizepräsident
+Michael Zweifel (Vereinspräsident)
+
+Marius Grossenbacher (Vizepräsident)
