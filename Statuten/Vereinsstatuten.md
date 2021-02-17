@@ -11,7 +11,7 @@ Zur Verfolgung des Vereinszweckes verfügt der Verein über folgende Mittel:
 *	Erträge aus Leistungsvereinbarungen 
 *	Spenden und Zuwendungen aller Art
 
-Die Mitgliederbeiträge werden jährlich durch die Mitgliederversammlung festgesetzt. Bei Neueintritt wird unabhängig vom Eintrittdatum der volle Jahresbeitrag verrechnet. Ehrenmitglieder sind vom Beitrag befreit. Der Vereinsvorstand kann selbstständig für die Zusammenarbeit mit anderen Institutionen vergünstigte/angepasste Mitgliedschaftsmodelle anbieten.
+Die Mitgliederbeiträge werden jährlich durch die Mitgliederversammlung festgesetzt. Bei Neueintritt wird unabhängig vom Eintrittsdatum der volle Jahresbeitrag verrechnet. Ehrenmitglieder sind vom Beitrag befreit. Der Vereinsvorstand kann selbstständig für die Zusammenarbeit mit anderen Institutionen vergünstigte/angepasste Mitgliedschaftsmodelle anbieten.
 ## 4. Geschäftsjahr
 Das Geschäftsjahr entspricht dem Kalenderjahr.
 ## 5. Mitgliedschaft
