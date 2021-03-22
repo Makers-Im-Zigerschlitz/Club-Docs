@@ -11,7 +11,7 @@ Zur Verfolgung des Vereinszweckes verfügt der Verein über folgende Mittel:
 *	Erträge aus Leistungsvereinbarungen 
 *	Spenden und Zuwendungen aller Art
 
-Die Mitgliederbeiträge werden jährlich durch die Mitgliederversammlung festgesetzt. Ehrenmitglieder sind vom Beitrag befreit. Der Vereinsvorstand kann selbstständig für die Zusammenarbeit mit anderen Institutionen vergünstigte/angepasste Mitgliedschaftsmodelle anbieten.
+Die Mitgliederbeiträge werden jährlich durch die Mitgliederversammlung festgesetzt. Bei Neueintritt wird unabhängig vom Eintrittsdatum der volle Jahresbeitrag verrechnet. Ehrenmitglieder sind vom Beitrag befreit. Der Vereinsvorstand kann selbstständig für die Zusammenarbeit mit anderen Institutionen vergünstigte/angepasste Mitgliedschaftsmodelle anbieten.
 ## 4. Geschäftsjahr
 Das Geschäftsjahr entspricht dem Kalenderjahr.
 ## 5. Mitgliedschaft
@@ -29,8 +29,7 @@ Die Mitgliedschaft erlischt
 *	bei natürlichen Personen durch Austritt, Ausschluss oder Tod.
 *	bei juristischen Personen durch Austritt, Ausschluss oder Auflösung der juristischen Person.
 ## 7. Austritt und Ausschluss
-Ein Vereinsaustritt ist jeweils Ende Jahr möglich. Das Austrittsschreiben muss mindestens 2 Wochen vor der ordentlichen Mitgliederversammlung schriftlich an den Vorstand gerichtet werden. Für das angebrochene Jahr ist der volle Mitgliederbeitrag zu bezahlen. Bei Neueintritt wird der Mitgliederbeitrag pro rata (quartalsweise) erhoben.
-Ein Mitglied kann jederzeit wegen Verstössen gegen die Ziele des Vereins, Verletzung der Statuten oder durch Beschluss des Vorstands aus dem Verein ausgeschlossen werden. Bleibt ein Mitglied trotz Mahnung den Mitgliederbeitrag schuldig, kann es vom Vorstand automatisch ausgeschlossen werden.
+Ein Vereinsaustritt ist jeweils Ende Jahr möglich. Das Austrittsschreiben muss mindestens 2 Wochen vor der ordentlichen Mitgliederversammlung schriftlich an den Vorstand gerichtet werden. Für das angebrochene Jahr ist der volle Mitgliederbeitrag zu bezahlen. Ein Mitglied kann jederzeit wegen Verstössen gegen die Ziele des Vereins, Verletzung der Statuten oder durch Beschluss des Vorstands aus dem Verein ausgeschlossen werden. Bleibt ein Mitglied trotz Mahnung den Mitgliederbeitrag schuldig, kann es vom Vorstand automatisch ausgeschlossen werden.
 Das Mitglied kann den Ausschlussentscheid an die Mitgliederversammlung weiterziehen.
 ## 8. Versicherung
 Versicherung ist Sache der Mitglieder, Kursteilnehmer und Makerspace-Benützer.
