@@ -14,20 +14,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Publish PDF Document
-        uses: shrink/actions-document-publish@v1
-        id: publish-document
-        with:
-          sources: 'charta/*.md house-rules/*.md statutes/*.md'
+      
+      # Install Pandoc and LaTeX
+      - name: Setup Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+          
+      # Convert Markdown files to PDFs using Times New Roman
+      - name: Convert Markdown to PDF
+        run: |
+          mkdir pdfs
+          for file in charta/*.md house-rules/*.md statutes/*.md; do
+            # Use XeLaTeX for system font support
+            pandoc "$file" -o "pdfs/$(basename "${file%.*}").pdf" --pdf-engine=xelatex -V mainfont="Times New Roman"
+          done
+      
       - if: github.event_name == 'release' && github.event.action == 'published'
         name: Get Release
         id: release
         uses: bruceadams/get-release@v1.2.0
-      - if: github.event_name == 'release' && github.event.action == 'published'
-        name: Attach PDF to Release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: ${{ steps.publish-document.outputs.pdf }}
-          asset_name: 'Documents_merged.pdf'
-          asset_content_type: application/pdf
+      
+      # Upload each PDF as a separate release asset
+      - name: Attach PDFs to Release
+        run: |
+          for pdf in pdfs/*.pdf; do
+            asset_name=$(basename "$pdf")
+            echo "Uploading $asset_name"
+            gh release upload ${{ github.ref }} "$pdf" --name "$asset_name" --token ${{ secrets.GITHUB_TOKEN }}
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
