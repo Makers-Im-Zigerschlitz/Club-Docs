@@ -15,19 +15,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      # Install Pandoc and LaTeX
-      - name: Setup Pandoc and LaTeX
+      # Install Pandoc, LaTeX, and xelatex
+      - name: Setup Pandoc, LaTeX, and xelatex
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+          # Install the full TeX Live package to ensure xelatex is included
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex
           
-      # Convert Markdown files to PDFs using Times New Roman
+      # Convert Markdown files to PDFs using a readable font
       - name: Convert Markdown to PDF
         run: |
-          mkdir pdfs
+          mkdir -p pdfs
           for file in charta/*.md house-rules/*.md statutes/*.md; do
-            # Use XeLaTeX for system font support
             pandoc "$file" -o "pdfs/$(basename "${file%.*}").pdf" --pdf-engine=xelatex -V mainfont="Times New Roman"
           done
       
