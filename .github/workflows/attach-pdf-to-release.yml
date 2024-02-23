@@ -8,34 +8,34 @@ env:
   GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
-  publish-and-release:
+  converttopdf:
+    name: Build PDF
     runs-on: ubuntu-latest
-    name: Publish Document to Release
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
-      # Install Pandoc, LaTeX, xelatex, and Liberation fonts
-      - name: Setup Pandoc, LaTeX, xelatex, and Liberation fonts
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex
-          # Install Liberation fonts
-          sudo apt-get install -y fonts-liberation
-          
-      # Convert Markdown files to PDFs using Liberation Serif as the font
-      - name: Convert Markdown to PDF
-        run: |
-          mkdir -p pdfs
-          for file in charta/*.md house-rules/*.md statutes/*.md; do
-            pandoc "$file" -o "pdfs/$(basename "${file%.*}").pdf" --pdf-engine=pdflatex -V mainfont="Liberation Serif"
-          done
-      
-      - if: github.event_name == 'release' && github.event.action == 'published'
-        name: Get Release
-        id: release
-        uses: bruceadams/get-release@v1.2.0
+      - uses: actions/checkout@v3
+      - uses: baileyjm02/markdown-to-pdf@v1
+        name: "Generating Statutes"
+        with:
+          input_dir: statutes
+          output_dir: pdfs
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+
+      - uses: baileyjm02/markdown-to-pdf@v1
+        name: "Generating Charta"
+        with:
+          input_dir: charta
+          output_dir: pdfs
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+
+      - uses: baileyjm02/markdown-to-pdf@v1
+        name: "Generating House-Rules"
+        with:
+          input_dir: house-rules
+          output_dir: pdfs
+          # Default is true, can set to false to only get PDF files
+          build_html: false
       
       # Upload each PDF as a separate release asset
       - name: Attach PDFs to Release
