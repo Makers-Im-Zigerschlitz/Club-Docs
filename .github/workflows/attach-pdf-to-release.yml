@@ -21,6 +21,13 @@ jobs:
           # Default is true, can set to false to only get PDF files
           build_html: false
 
+      - name: Attach Statutes to Release
+        run: |
+          for pdf in pdfs/*.pdf; do
+            echo "Uploading $(basename "$pdf")"
+            gh release upload ${{ github.ref_name }} "$pdf" --clobber
+          done
+
       - uses: baileyjm02/markdown-to-pdf@v1
         name: "Generating Charta"
         with:
@@ -28,6 +35,13 @@ jobs:
           output_dir: pdfs
           # Default is true, can set to false to only get PDF files
           build_html: false
+
+      - name: Attach Charta to Release
+        run: |
+          for pdf in pdfs/*.pdf; do
+            echo "Uploading $(basename "$pdf")"
+            gh release upload ${{ github.ref_name }} "$pdf" --clobber
+          done
 
       - uses: baileyjm02/markdown-to-pdf@v1
         name: "Generating House-Rules"
@@ -37,8 +51,7 @@ jobs:
           # Default is true, can set to false to only get PDF files
           build_html: false
       
-      # Upload each PDF as a separate release asset
-      - name: Attach PDFs to Release
+      - name: Attach House-Rules to Release
         run: |
           for pdf in pdfs/*.pdf; do
             echo "Uploading $(basename "$pdf")"
