@@ -1,7 +1,6 @@
 name: Publish Document to Release
 
 on:
-  push:
   release:
     types: [published]
 
