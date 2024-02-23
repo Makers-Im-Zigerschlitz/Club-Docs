@@ -41,9 +41,9 @@ jobs:
       - name: Attach PDFs to Release
         run: |
           for pdf in pdfs/*.pdf; do
-            asset_name=$(basename "$pdf")
-            echo "Uploading $asset_name"
-            gh release upload ${{ github.ref }} "$pdf" --name "$asset_name" --token ${{ secrets.GITHUB_TOKEN }}
+            echo "Uploading $(basename "$pdf")"
+            gh release upload ${{ github.ref_name }} "$pdf" --clobber --token ${{ secrets.GITHUB_TOKEN }}
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
