@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir -p pdfs
           for file in charta/*.md house-rules/*.md statutes/*.md; do
-            pandoc "$file" -o "pdfs/$(basename "${file%.*}").pdf" --pdf-engine=xelatex -V mainfont="Liberation Serif"
+            pandoc "$file" -o "pdfs/$(basename "${file%.*}").pdf" --pdf-engine=pdflatex -V mainfont="Liberation Serif"
           done
       
       - if: github.event_name == 'release' && github.event.action == 'published'
