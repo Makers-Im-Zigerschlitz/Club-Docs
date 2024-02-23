@@ -42,8 +42,7 @@ jobs:
         run: |
           for pdf in pdfs/*.pdf; do
             echo "Uploading $(basename "$pdf")"
-            gh release upload ${{ github.ref_name }} "$pdf" --clobber --token ${{ secrets.GITHUB_TOKEN }}
+            gh release upload ${{ github.ref_name }} "$pdf" --clobber
           done
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
