@@ -127,7 +127,7 @@ Bei einer Auflösung des Vereins fällt das Vereinsvermögen an eine steuerbefre
 
 ## 16. Inkrafttreten
 
-Diese Statuten wurden an der Mitgliederversammlung vom 14.02.2020 beschlossen, traten am gleichen Tag in Kraft und ersetzen die Statuten vom 14.02.2020.
+Diese Statuten wurden an der Mitgliederversammlung vom 21.02.2025 beschlossen, traten am gleichen Tag in Kraft und ersetzen die Statuten vom 14.02.2020.
 
 Näfels, 21.02.2025
 
